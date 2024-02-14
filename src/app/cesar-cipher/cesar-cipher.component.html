@@ -1,0 +1,20 @@
+<h1>Caesar Cipher</h1>
+
+<label for="input-text">Input text:</label>
+<input type="text" id="input-text" [(ngModel)]="inputText" #inputTextElement>
+<br>
+<label for="encrypt-switch">Encrypt:</label>
+<input type="checkbox" id="encrypt-switch" [(ngModel)]="encrypt">
+<br>
+<label for="module-select">Module:</label>
+<select id="module-select" [(ngModel)]="module">
+    <option value="shift1">Shift 1</option>
+    <option value="shift2">Shift 2</option>
+    <option value="shift3">Shift 3</option>
+</select>
+<br>
+<button (click)="encryptDecrypt()">Encrypt/Decrypt</button>
+<br>
+<label for="output-text">Output text:</label>
+<textarea id="output-text" readonly [value]="outputText" #outputTextElement></textarea>
+<br>

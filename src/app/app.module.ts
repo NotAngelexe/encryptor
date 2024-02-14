@@ -1,16 +1,17 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; // Importa el módulo FormsModule
 import { AppComponent } from './app.component';
+import { CesarCipherComponent } from './cesar-cipher/cesar-cipher.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CesarCipherComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule // Agrega FormsModule en la sección de imports
   ],
   providers: [],
   bootstrap: [AppComponent]
