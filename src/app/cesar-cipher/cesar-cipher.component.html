@@ -3,24 +3,32 @@
 </div>
 
 <div class="form">
+  <div class="data">
+<div class="intro">
   <label for="input-text">Input text:</label>
+  <br>
   <input type="text" id="input-text" [(ngModel)]="inputText" #inputTextElement>
-  <br>
-    <label>
-      <input type="checkbox" id="encrypt-switch" [(ngModel)]="encrypt"/>
-      <span>Encrypt</span>
-    </label>
-  <br>
-    <label for="module-select">Module:</label>
-    <select id="module-select" [(ngModel)]="module">
-        <option value="shift1">Shift 1</option>
-        <option value="shift2">Shift 2</option>
-        <option value="shift3">Shift 3</option>
-    </select>
-    <br>
-  <button (click)="encryptDecrypt()">Encrypt/Decrypt</button>
-  <br>
-  <label for="output-text">Output text:</label>
-  <textarea id="output-text" readonly [value]="outputText" #outputTextElement></textarea>
-  <br>
 </div>
+<div class="out">
+  <label for="output-text">Output text:</label>
+  <br>
+  <textarea id="output-text" readonly [value]="outputText" #outputTextElement></textarea>
+</div>
+  </div>
+<div>
+  <input type="checkbox" name="encrypt-switch" value="encrypt-switch" id="encrypt-switch" [(ngModel)]="encrypt">
+<label for="encrypt-switch" data-content="Encrypt">Encrypt</label>
+</div>
+  <!-- <label>
+    <input type="checkbox" checked="checked"  id="encrypt-switch" [(ngModel)]="encrypt"/>
+    <span>Encrypt</span>
+  </label> -->
+  <label for="module-select">Module:</label>
+  <select id="module-select" [(ngModel)]="module">
+      <option value="shift1">Shift 1</option>
+      <option value="shift2">Shift 2</option>
+      <option value="shift3">Shift 3</option>
+  </select>
+  <br>
+<button (click)="encryptDecrypt()">Encrypt/Decrypt</button>
+  </div>
