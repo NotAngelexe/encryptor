@@ -11,8 +11,16 @@ export class CesarCipherComponent {
   encrypt: boolean = true;
   module: string = 'shift1';
   outputText: string = '';
+  asciiValues: number[] = [];
+  asciiCharacters: string[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor() {
+    // Llenar el arreglo con los valores ASCII del 32 al 126 (caracteres imprimibles comunes)
+    for (let i = 0; i <= 255; i++) {
+      this.asciiValues.push(i);
+      this.asciiCharacters.push(String.fromCharCode(i));
+    }
+  }
 
   encryptDecrypt() {
     let shift = 0;
